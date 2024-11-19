@@ -50,6 +50,30 @@ UIKit & AVFoundation: For camera integration and real-time video processing.
 Core ML & Vision: For implementing machine learning models to detect currencies.
 Accessibility Features: Vibration, auditory feedback, and visual cues.
 
+**Dataset for Training**
+
+This app leverages a robust dataset from Roboflow's Currency Recognition to train its machine learning models. The dataset provides annotated images of various currencies, making it ideal for creating a powerful and accurate recognition system.
+
+**Why This Dataset?**
+Comprehensive Coverage: Includes high-quality images of various currencies.
+Annotated Data: Comes pre-labeled with bounding boxes for denominations, reducing preprocessing time.
+Optimized for Vision Models: Well-suited for training object detection models using frameworks like Core ML, YOLO, or TensorFlow.
+
+**How We Used It**
+Dataset Access:
+The dataset was downloaded from Roboflow for training the currency detection model.
+Visit the Currency Recognition Dataset for more details.
+Training:
+The dataset was used to train a YOLO-based object detection model.
+After training, the model was converted to a format compatible with Apple's Core ML framework.
+Integration:
+The trained Core ML model (MultiNoteClassifier.mlmodelc) was integrated into the app for real-time recognition.
+
+**Expanding the Dataset**
+You can further improve the model by:
+
+Collecting More Images: Add currency from other countries or additional denominations.
+Using Roboflow Tools: Enhance annotations and augment the dataset with transformations for better generalization.
 
 **User Agreement**
 The app displays the following agreement on the first launch:
